@@ -40,17 +40,17 @@ deploy-to-kubernetes:
     # We'll create a directory to move them to.
     - script:
         name: Prepare Kubernetes files
-        code: |
-          mkdir $WERCKER_OUTPUT_DIR/kubernetes
-          mv kubernetes_*.yml $WERCKER_OUTPUT_DIR/kubernetes
+        code: |cat kubernetes.yml
+       # mkdir $WERCKER_OUTPUT_DIR/kubernetes
+       #  mv kubernetes_*.yml $WERCKER_OUTPUT_DIR/kubernetes
     # `apply` is a good command to use here, as it'll create Kubernetes entities if they are missing.
     - kubectl:
         name: deploy to kubernetes
         server: $OKE_MASTER
         token: $OKE_TOKEN
         insecure-skip-tls-verify: true
-        command: apply -f $WERCKER_OUTPUT_DIR/kubernetes/
-
+      #  command: apply -f $WERCKER_OUTPUT_DIR/kubernetes/
+         command: apply -f kubernetes.yml
     # Tell Kubernetes that we're going to wait 60 seconds for the deploy to be successful
     - kubectl:
         name: set deployment timeout
