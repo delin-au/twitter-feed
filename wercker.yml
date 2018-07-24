@@ -41,7 +41,6 @@ deploy-to-kubernetes:
     -- script:
         name: "Visualise Kubernetes config"
         code: cat kubernetes.yml
-    # 
     - kubectl:
         name: deploy to kubernetes
         server: $OKE_MASTER
