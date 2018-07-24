@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: twitter-feed
-        image: phx.ocir.io/apaciaas/twitter-feed:40865fe161a38672bb133686fc43c2b4577066d4
+        image: phx.ocir.io/apaciaas/twitter-feed:${WERCKER_GIT_COMMIT}
         imagePullPolicy: Always
         ports:
         - name: twitter-feed
