@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: twitter-feed
   labels:
-    commit: 40865fe161a38672bb133686fc43c2b4577066d4
+    commit: 5aa197509055110c327360489b126965119a4581
 spec:
   replicas: 2
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: twitter-feed
-        image: phx.ocir.io/apaciaas/twitter-feed:40865fe161a38672bb133686fc43c2b4577066d4
+        image: phx.ocir.io/apaciaas/twitter-feed:5aa197509055110c327360489b126965119a4581
         imagePullPolicy: Always
         ports:
         - name: twitter-feed
@@ -44,7 +44,7 @@ metadata:
   name: twitter-feed
   labels:
     app: twitter-feed
-    commit: 40865fe161a38672bb133686fc43c2b4577066d4
+    commit: 5aa197509055110c327360489b126965119a4581
 spec:
   ports:
   - port: 30000
