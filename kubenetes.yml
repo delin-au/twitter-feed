@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: twitter-feed
   labels:
-    commit: AAA
+    commit: AAB
 spec:
   replicas: 2
   selector:
@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: twitter-feed
-        commit: AAA
+        commit: AAB
         color: green
     spec:
       containers:
@@ -44,7 +44,7 @@ metadata:
   name: twitter-feed
   labels:
     app: twitter-feed
-    commit: AAA
+    commit: AAB
 spec:
   ports:
   - port: 30000
