@@ -17,11 +17,11 @@ spec:
         color: green
     spec:
       containers:
-      - name: twitter-feed-s1
+      - name: twitter-feed
         image: ${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
         imagePullPolicy: Always
         ports:
-        - name: twitter-feed-s1
+        - name: twitter-feed
           containerPort: 8080
           protocol: TCP
         volumeMounts:
@@ -36,7 +36,7 @@ spec:
               fieldRef:
                 fieldPath: metadata.labels
       imagePullSecrets:
-        - name: ocisecret
+        - name: ocirsecret
 ---
 apiVersion: v1
 kind: Service
