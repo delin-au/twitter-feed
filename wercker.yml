@@ -27,7 +27,7 @@ push-release:
         cmd: sh target/bin/start
 deploy-to-kubernetes:
     box:
-     id : alpine
+    # id : alpine
     steps:
     # https://github.com/wercker/step-bash-template
     # This Wercker step will look for files in our repo with a .template extension.
