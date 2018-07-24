@@ -36,9 +36,7 @@ deploy-to-kubernetes:
     - bash-template
     # The step above should leave us with a Kubernetes service and deployment yml files.
     # We'll create a directory to move them to.
-    -- script:
-        name: "Visualise Kubernetes config"
-        code: cat kubernetes.yml
+   
     - kubectl:
         name: deploy to kubernetes
         server: $OKE_MASTER
