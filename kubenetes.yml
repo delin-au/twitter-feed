@@ -17,11 +17,11 @@ spec:
         color: green
     spec:
       containers:
-      - name: 
+      - name: twitter-feed-server
         image: ${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
         imagePullPolicy: Always
         ports:
-        - name: twitter-feed
+        - name: twitter-feed-server
           containerPort: 8080
           protocol: TCP
         volumeMounts:
